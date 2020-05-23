@@ -1,1 +1,211 @@
-Hello World
+<head>
+    <title> Harlene Samra's Website </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+    <style>
+      .nav{
+        border:1px solid #ccc;
+        border-width:1px 0;
+        text-align:center;
+        color:#5B4285;
+        background:#ffffff;
+        margin-bottom:2%;
+      }
+
+      .nav li{
+          display:inline;
+          padding:50px;
+      }
+
+      .btn {
+        font-size: 20px;
+      }
+      .btn:hover {
+        background: #b49ec7;
+      }
+
+      .btn.active {
+        -webkit-box-shadow: none;
+        box-shadow:none;
+        font-weight: bold;
+      }
+
+      #profilePic {
+        margin:10px; 
+        margin-top:20px; 
+        border-radius:50%; 
+        width:300px; 
+        height:auto;
+        float:right;
+      } 
+      .headerRow {
+        display: flex;
+        background-color: #5B4285;
+        color: #ffffff; 
+        font-family: aileron-thin;
+        height:30%;
+        /* text-align: center; */
+      }
+
+      .column {
+        flex: 50%;
+        padding: 5px;
+        margin-top:5%;
+      }
+
+      .row {
+        font-size:20px;
+        margin-left:25%;
+        margin-right:auto;
+        width:50%;
+        font-family: Helvetica;
+      }
+
+      .boldedText {
+        font-weight: 500;
+        color:#5B4285;
+      }
+
+      .boldedH2 {
+        font-weight: bold;
+        color:#5B4285;
+      }
+
+    </style>
+    <script type="text/javascript">
+      function changeAbout() {
+        var x = document.getElementById("about");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          document.getElementById("btnAbout").className = "btn active";
+          
+          document.getElementById("resume").style.display = "none";
+          document.getElementById("btnResume").className = 'btn';
+
+          document.getElementById("funStuff").style.display = "none";
+          document.getElementById("btnFunStuff").className = 'btn';
+        }
+      }
+      function changeResume() {
+        var x = document.getElementById("resume");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          document.getElementById("btnResume").className = "btn active";
+
+          document.getElementById("about").style.display = "none";
+          document.getElementById("btnAbout").className = "btn";
+
+          document.getElementById("funStuff").style.display = "none";
+          document.getElementById("btnFunStuff").className = "btn";
+        }
+      }
+      function changeFunStuff() {
+        var x = document.getElementById("funStuff");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          document.getElementById("btnFunStuff").className = "btn active";
+
+          document.getElementById("about").style.display = "none";
+          document.getElementById("btnAbout").className = "btn";
+
+          document.getElementById("resume").style.display = "none";
+          document.getElementById("btnResume").className = "btn";
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <div class="headerRow">
+      <div class="column">
+        <img src="harlene.jpg" id="profilePic" alt="profile">
+      </div>
+      <div class="column" style="margin-top:8%">
+        <h1 style="font-size: 75px">Harlene Kaur Samra</h1>
+        <a href="https://www.facebook.com/harlene.samra/"><i class="fab fa-facebook fa-3x" style='margin: 10px; color:white'></i></a>
+        <a href="https://www.linkedin.com/in/harlene-samra/"><i class="fab fa-linkedin fa-3x" style='margin: 10px; color:white'></i></a>
+        <a href="https://github.com/harlenesamra"><i class="fab fa-github-square fa-3x" style='margin: 10px; color:white'></i></a>
+      </div>
+    </div> 
+    <ul class="nav">
+      <li><button class="btn active" id="btnAbout" onclick="changeAbout()">ABOUT</button></li>
+      <li><button class="btn" id="btnResume" onclick="changeResume()">RESUME</button></li>
+      <li><button class="btn" id="btnFunStuff" onclick="changeFunStuff()">FUN STUFF</button></li>
+    </ul>
+
+    <div id="about" class="row">
+      <p>
+        Hey there!
+      </p>
+      <p>
+        I am currently a rising senior studying Computer Science at <a href="https://www.cmu.edu/">Carnegie Mellon University</a> in Pittsburgh, Pennsylvania.
+      </p>
+      <p>
+        My areas of interest involve <span class="boldedText">Language Technologies</span> and <span class="boldedText">CS Education</span> (especially in the K-12 realm).
+      </p>
+      <p>
+        Other than classes, I enjoy working on my community service club <a href="http://teknowledge.xyz/">Teknowledge</a>, being a <span class="boldedText">Teaching Assistant</span>, being an <span class="boldedText">SCS Tour Guide</span> and helping out with the annual <span class="boldedText">SCS Day</span> in SCS.
+      </p>
+      <p>
+        Feel free to take a look at my resume for more specifics about the projects I have worked on as well as my past experiences! If you want to know more about me, check out the <span class="boldedText">Fun Stuff</span> section.
+      </p>
+    </div>
+
+    <div id="resume" class="row" style="display:none">
+      <p>
+        Here is a complete pdf version: <a href="/Harlene_Resume.pdf">Resume</a>
+      </p>
+      <h2 class='boldedH2'>Education:</h2>
+      <p>
+        Carnegie Mellon University School of Computer Science 2017 - 2020
+        <br>
+        Minor: Language Technologies
+        <br>
+        <a href="https://www.cs.cmu.edu/news/harlene-samra-earns-inaugural-krulcik-scholarship"> Inaugural Scott Krulcik Scholarship </a>
+        <br>
+        <a href="https://www.cmu.edu/piper/news/archives/2020/april/gelfand-student-outreach-winners.html"> Gelfand Student Educational Outreach Award </a>
+      </p>
+      <h2 class='boldedH2'>Experience:</h2>
+      <p>
+        Software Development Engineering Intern, Alexa AMA, Summer 2020
+        <br>
+        Software Development Engineering Intern, Alexa Personalized News, Summer 2019
+        <br>
+        Research Assistant, Language Technologies Institute, Spring 2020
+        <br>
+        Teaching Assistant (since Fall 2018)
+        <ul>
+          <li> 15-151 Mathematical Foundations for Computer Science (Head TA)</li>
+          <li> 15-151 Functional Programming </li>
+          <li> 15-281 Artificial Representation & Problem Solving</li>
+        </ul>
+        Content Developer, CMU CS Academy, since Summer 2018
+        <br>
+      </p>
+      <h2 class='boldedH2'>Activities:</h2>
+      <p>
+        Teknowledge President and Mentor
+        <br>
+        SCS Tour Guide
+        <br>
+        SCS Day Volunteer
+        <br>
+        Member of Women@SCS
+        <br> 
+      </p>
+      <h2 class='boldedH2'>Projects:</h2>
+      <p>
+        Question Answering System: Developed as part of a semester long group project in my Natural Language Processing class using libraries such as nltk and spacy
+      </p>
+    </div>
+
+    <div id="funStuff" class="row" style="display:none">
+      <p>
+        Welcome to the random part of my website!
+      </p>
+    </div>
+</body>
